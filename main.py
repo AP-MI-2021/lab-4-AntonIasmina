@@ -4,7 +4,7 @@ def citeste_lista_float():
     list_str=input('Cititi numere separate printr-un spatiu:')
     list_str_split=list_str.split(' ')
     for numar_str in list_str_split:
-        list.append(float(num_str))
+        list.append(float(numar_str))
     return list
 
 def get_parte_intreaga(lst):
@@ -13,10 +13,10 @@ def get_parte_intreaga(lst):
     :param lst: lista de floaturi
     :return: lst de intregi
     """
-    lista_noua=[]
+    lista= []
     for numar in lst:
-        lista_noua.append(int(numar))
-    return lista_noua
+        lista.append(int(numar))
+    return lista
 
 def test_get_parte_intreaga():
     assert get_parte_intreaga([])==[]
@@ -78,7 +78,7 @@ if __name__=="__main__":
         print("2.Adauga intr-o lista noua partea intreaga a tuturor elementelor din lista initiala:")
         print("3.Afiseaza numerele care care apartin unui interval deschis citit de la tastatura:")
         print("4.Afiseaza toate numerele a caror parte intreaga este divizor al partii fractionare:")
-        print("")
+        print("5.Afișeaza lista obținuta din lista inițială în care numerele sunt înlocuite cu un string:")
         print("6.Iesire:")
 
         optiune=input("Alege optiunea:")
@@ -86,7 +86,7 @@ if __name__=="__main__":
         if optiune=='1':
             sir=citeste_lista_float()
         elif optiune=='2':
-            intreg=get_parte_intreaga()
+            intreg=get_parte_intreaga(sir)
             print(intreg)
         elif optiune=='3':
             stanga=float(input('Dati capatul din stanga al intervalului:'))
